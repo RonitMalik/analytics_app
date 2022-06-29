@@ -38,13 +38,6 @@ def main():
         st.dataframe(df.head())
         profile = ProfileReport(df)
         if st.button("Generate Report"):
-            lottie_hello1 = load_lottieurl('https://assets2.lottiefiles.com/packages/lf20_oi0plzot.json')
-            st_lottie(
-            lottie_hello1,
-            speed=1,
-            height=50,
-            width=50
-            )
             st_profile_report(profile)
 
 
