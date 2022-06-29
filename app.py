@@ -30,7 +30,6 @@ def main():
 
     st.title('''
     **Descriptive Analytics Tool**''')
-    st.markdown("This tool used for descriptive analysis for any CSV file that you upload")
     data_file = st.file_uploader("Upload Your CSV", type=['CSV'])
 
 
