@@ -30,7 +30,7 @@ def main():
 
     st.title('''
     **Descriptive Analytics Tool**''')
-    data_file = st.file_uploader("Upload Your CSV", type=['CSV'])
+    data_file = st.file_uploader(" ", type=['CSV'])
 
 
     if data_file is not None:
