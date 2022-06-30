@@ -67,8 +67,9 @@ def main():
         if data_file is not None:
             df = pd.read_csv(data_file)
             st.dataframe(df.head())
-            if st.button('Generate Report'):
-                st_display_sweetviz('SWEETVIZ_REPORT.html')
+            report = sv.analyze(df)
+            report.show_html()
+            
 
 
 if __name__=='__main__':
