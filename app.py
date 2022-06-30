@@ -68,6 +68,6 @@ def main():
             df = pd.read_csv(data_file)
             st.dataframe(df.head())
             if st.button("Generate sweetviz Report"):
-                st_display_sweetviz('https://github.com/RonitMalik/analytics_app/blob/main/SWEETVIZ_REPORT.html')
+                st_display_sweetviz(df)
 if __name__=='__main__':
     main()
