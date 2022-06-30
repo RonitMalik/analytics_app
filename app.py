@@ -67,10 +67,7 @@ def main():
         if data_file is not None:
             df = pd.read_csv(data_file)
             st.dataframe(df.head())
-            report = sv.analyze(df)
-            report.show_html()
-            
-
-
+            if st.button("Generate sweetviz Report"):
+                st_display_sweetviz('https://github.com/RonitMalik/analytics_app/blob/main/SWEETVIZ_REPORT.html')
 if __name__=='__main__':
     main()
