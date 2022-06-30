@@ -11,14 +11,6 @@ import requests
 import streamlit.components.v1 as components
 from streamlit_pandas_profiling import st_profile_report
 
-#Custom components
-import sweetviz as sv
-
-def st_display_sweetviz(report_html, width=2000, height= 1000):
-    report_file = codecs.open(report_html, 'r')
-    page = report_file.read()
-    components.html(page, width= width, height=height, scrolling=True)
-
 
 st.cache(allow_output_mutation=True)
 def main():
@@ -30,8 +22,6 @@ def main():
             return None
         return r.json()
 
-    menu = ['Profiling Report', 'Profiling Report Non-technical']
-    choice = st.sidebar.selectbox("Choose your descriptive analytics tool", menu)
 
     lottie_hello = load_lottieurl('https://assets6.lottiefiles.com/packages/lf20_hx7ddrx9.json')
     st_lottie(
